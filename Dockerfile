@@ -5,7 +5,7 @@ MAINTAINER Juan Pedro Perez "jp.perez.alcantara@gmail.com"
 # Base packages for JupyterHub
 RUN apt-get update
 
-RUN apt-get install -y python3 npm nodejs-legacy python3-pip libgeos-dev
+RUN apt-get install -y python3 npm nodejs-legacy python3-pip libgeos-dev graphviz
 
 RUN npm install -g configurable-http-proxy
 
@@ -16,7 +16,7 @@ RUN pip3 install --upgrade notebook
 EXPOSE 8000
 
 # Additional packages
-RUN pip3 install numpy pandas matplotlib geopandas seaborn ipywidgets tqdm folium
+RUN pip3 install numpy pandas matplotlib geopandas seaborn ipywidgets tqdm folium sklearn pydotplus
 
 # Add notebooks
 ADD Assets/notebooks /Notebooks
