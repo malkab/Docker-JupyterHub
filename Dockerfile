@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
-MAINTAINER Juan Pedro Perez "jp.perez.alcantara@gmail.com"
+LABEL maintainer="Juan Pedro Perez"
+LABEL email="jp.perez.alcantara@gmail.com"
 
 # Base packages for JupyterHub
 RUN apt-get update
